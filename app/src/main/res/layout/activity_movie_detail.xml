@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context="com.kitty.movietune.MovieDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Movie Tune"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:height="52dp"
+            android:textSize="20sp"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/rel">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/movie_poster"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:background="#737373"
+            android:id="@+id/l1"
+            android:layout_marginTop="140dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                android:layout_gravity="left">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/m_title"
+                        android:layout_gravity="center_vertical"
+                        android:text="Movie Title"
+                        android:textSize="15dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/m_year"
+                        android:layout_marginLeft="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="Release Year"
+                        android:textSize="18dp"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/vote_ttl"
+                        android:layout_width="85dp"
+                        android:layout_height="15dp"
+                        android:text="Vote Avg."
+                        android:gravity="center_horizontal"
+                        android:textSize="9dp"
+                        android:textColor="#fff"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignLeft="@+id/vote"
+                        android:layout_alignStart="@+id/vote" />
+
+                    <TextView
+                        android:id="@+id/vote"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="13dp"
+                        android:background="@drawable/circle"
+                        android:textColor="#fff"
+                        android:layout_below="@+id/vote_ttl"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l1"
+            android:id="@+id/l2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movie_description"
+                android:text="Movie Description"
+                android:textSize="15sp"
+                android:textColor="#fff"/>
+        </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/l2"
+              android:orientation="horizontal">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/language"
+                  android:text="Language: "
+                  android:textSize="15sp"
+                  android:textColor="#fff"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/movie_language"
+                  android:text="Language"
+                  android:textSize="15sp"
+                  android:textColor="#fff"/>
+
+          </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
